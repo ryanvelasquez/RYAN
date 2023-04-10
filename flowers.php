@@ -9,7 +9,7 @@ $flowers = array(
             "meaning" => "Love, passion, and beauty",
             "country" => "China",
             "scientific_name" => "Rosa",
-        ),
+        ),"image" => "https://images.pexels.com/photos/2300713/pexels-photo-2300713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ),
     "flower2" => array(
         "name" => "Tulip",
@@ -18,7 +18,7 @@ $flowers = array(
             "meaning" => "Perfect love",
             "country" => "Turkey",
             "scientific_name" => "Tulipa",
-        ),"image" =>
+        ),"image" => "https://images.pexels.com/photos/7175579/pexels-photo-7175579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ),
     "flower3" => array(
         "name" => "Daisy",
@@ -27,7 +27,7 @@ $flowers = array(
             "meaning" => "Innocence, purity, and new beginnings",
             "country" => "Europe, North America, and Africa",
             "scientific_name" => "Bellis perennis",
-        ),"image" => 
+        ),"image" => "https://images.pexels.com/photos/8981015/pexels-photo-8981015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ),
     "flower4" => array(
         "name" => "Lily",
@@ -36,7 +36,7 @@ $flowers = array(
             "meaning" => "Purity, devotion, and rebirth",
             "country" => "Europe, Asia, and North America",
             "scientific_name" => "Lilium",
-        ),"image" =>
+        ),"image" => "https://images.pexels.com/photos/132466/pexels-photo-132466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ),
     "flower5" => array(
         "name" => "Orchid",
@@ -45,7 +45,7 @@ $flowers = array(
             "meaning" => "Love, beauty, luxury, and strength",
             "country" => "Tropical regions around the world",
             "scientific_name" => "Orchidaceae",
-        ),"image" =>
+        ),"image" => "https://images.pexels.com/photos/3699859/pexels-photo-3699859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ),
 );
 

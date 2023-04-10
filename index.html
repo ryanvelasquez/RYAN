@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Flowers</title>
+</head>
+<body class="bg">
+    <div class="container mt-40 mb-30">
+        <h1 class="text-center">Flowers</h1>
+        <div class="card" id="cards"></div>
+    </div>
+
+    <script>
+        const xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "flowers.php");
+        xmlhttp.send();
+        xmlhttp.onload = function() {
+            const flowers = JSON.parse(this.responseText);
+            const items = document.getElementById('cards');
+            let j = 0;
+            for (const id in flowers) {
+                if (flowers.hasOwnProperty(id)) {
+                    j++;
+                    const flower = flowers[id];
+                    const row = `
+                        <div class="card">
+                            <div class="front before">
+                                <img src="${flowers[id].image}">
+                            </div>
+                            <div class="front after">
+                                <h3>${flower.name}</h3>
+                                <ul>
+                                    <li><strong>Color:</strong> ${flower.details.color}</li>
+                                    <li><strong>Meaning:</strong> ${flower.details.meaning}</li>
+                                    <li><strong>Country:</strong> ${flower.details.country}</li>
+                                    <li><strong>Scientific Name:</strong> ${flower.details.scientific_name}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    `;
+                    items.innerHTML += row;    
+                }
+            }
+        };
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
